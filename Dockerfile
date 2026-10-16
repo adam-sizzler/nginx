@@ -100,7 +100,6 @@ COPY --from=build /usr/share/nginx /usr/share/nginx
 RUN mkdir -p \
     /etc/nginx/conf.d \
     /etc/nginx/geolite2 \
-    /var/www/html \
     /var/cache/nginx \
     /var/log/nginx \
     /var/log/supervisor \
@@ -120,7 +119,6 @@ COPY mime.types /etc/nginx/
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY conf.d/ /etc/nginx/conf.d/
 COPY supervisord.conf /etc/supervisor/supervisord.conf
-COPY var/www/ /var/www/
 
 # Выполняем первичную загрузку баз
 COPY scripts/update_geolite.sh /usr/local/bin/
