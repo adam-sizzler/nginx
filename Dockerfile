@@ -3,7 +3,7 @@
 #######################################
 FROM alpine:latest AS build
 
-ENV NGINX_VERSION=1.30.3
+ENV NGINX_VERSION=1.31.9
 
 # Установка зависимостей для сборки
 RUN apk add --no-cache \
